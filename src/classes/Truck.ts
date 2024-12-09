@@ -29,8 +29,8 @@ class Truck extends Vehicle {
     year: number,
     weight: number,
     topSpeed: number,
-    towingCapacity: number,
-    wheels: Wheel[]
+    wheels: Wheel[],
+    towingCapacity: number
   ) {
     // TODO: The constructor should call the constructor of the parent class, Vehicle
     super();
@@ -68,8 +68,9 @@ class Truck extends Vehicle {
     if (typeof vehicle.weight !== 'undefined' && (vehicle.weight <= this.towingCapacity)) {
     // TODO: If it is, log that the vehicle is being towed
      console.log(`The ${vehicle.make} ${vehicle.model} is being towed`);
+    } else {
     // TODO: If it is not, log that the vehicle is too heavy to be towed
-     console.log{(`The ${vehicle.make} ${vehicle.model} is too heavy to be towed`)}
+     console.log(`The ${vehicle.make} ${vehicle.model} is too heavy to be towed`);
     }
   }
 

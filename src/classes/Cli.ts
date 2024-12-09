@@ -185,8 +185,8 @@ class Cli {
           parseInt(answers.year),
           parseInt(answers.weight),
           parseInt(answers.topSpeed),
-          parseInt(answers.towingCapacity),
-          []
+          [],
+          parseInt(answers.towingCapacity),          
         );
         // TODO: push the truck to the vehicles array
         this.vehicles.push(truck);
@@ -328,7 +328,7 @@ class Cli {
             'Turn right',
             'Turn left',
             'Reverse',
-            'Tow anoher vehicle',  //add tow option
+            'Tow another vehicle',  //add tow option
             'Perform wheelie', //add wheelie option
             'Select or create another vehicle',
             'Exit',
@@ -398,26 +398,37 @@ class Cli {
         //After calling the findVehicleToTow method, you will need to return to avoid instantly calling the performActions 
         //method again since findVehicleToTow is asynchronous.
         } else if (answers.action === 'Tow another vehicle') {
+           //find the vehicle in the array
+           for (let i = 0; i < this.vehicles.length; i++) {
+             if (this.vehicles[i].vin === this.selectedVehicleVin) {
             //if the vehicle selected is a truck then can call it's findVehcleToTow method
-            const vehicleSelected = this.vehicles;
-            if (vehicleSelected instanceof Truck) {
-                this.findVehicleToTow(vehicleSelected);
-                return; //return to avoid calling perform actions immediately
-            } else {
-              //if not a truck then can't tow another vehicle
-              console.log('Must be a truck to tow other vehicles');
-              //go back to actions menu
-              this.performActions();
+                let vehicleSelected = this.vehicles[i];
+                if (vehicleSelected instanceof Truck) {
+                       this.findVehicleToTow(vehicleSelected);
+                  return; //return to avoid calling perform actions immediately
+                } else {
+                  //if not a truck then can't tow another vehicle
+                  console.log('Must be a truck to tow other vehicles');
+                }
             }
+          }
         // TODO: add statements to perform the wheelie action only if the selected vehicle is a motorbike
         } else if (answers.action === 'Perform wheelie') {
-            if (this.vehicles instanceof Motorbike) {
-              this.vehicles.wheelie(this.vehicles);
-            } else {
-              console.log('Vehcle selected must be a motorbike to perform a wheelie');
-              //go back to action menue
-              this.performActions();
+          // find the selected vehicle and stop it
+          for (let i = 0; i < this.vehicles.length; i++) {
+            if (this.vehicles[i].vin === this.selectedVehicleVin) {
+              //check if the vehicle selected is an instance of the class Motorbike
+              let vehicleSelected = this.vehicles[i];
+              if (vehicleSelected instanceof Motorbike) {
+                //invoke class method wheelie
+                  vehicleSelected.wheelie();
+              } else {
+                console.log('Vehcle selected must be a motorbike to perform a wheelie');
+                //go back to action menu
+                //this.performActions();
+              }
             }
+          }
         } else if (answers.action === 'Select or create another vehicle') {
           // start the cli to return to the initial prompt if the user wants to select or create another vehicle
           this.startCli();
