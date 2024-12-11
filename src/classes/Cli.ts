@@ -322,6 +322,7 @@ class Cli {
 
   // method to perform actions on a vehicle
   performActions(): void {
+    
     inquirer
       .prompt([
         {
