@@ -3,7 +3,6 @@
 
 ## Table of Contents
 - [Description](#description)
-- [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Walkthrough](#walkthrough)
@@ -13,28 +12,15 @@
 - [License](#license)
 
 ## Description
-The Vehicle Builder is a command-line application designed to allow the user to log information about a car, truck or motorbike and them perform certain actions on the vehicle they have logged. 
+The Vehicle Builder is a command-line application designed to allow the user to log information about a car, truck or motorbike and then perform certain actions on the vehicle the user has logged. 
 
-## Features
-
-- Choice of car, truck or motorbike
-- Choose to perform the following actions on the vehicle:
-    - 
-    - Installation
-    - Usage
-    - Contributing
-    - Tests
-    - Questions
-    - License
--  A link to the license information will be provided in the License secgtion
--  contact information under questions section includes email, gitHub username and link to gitHub account
 
 ## Installation
 1. Clone the repository
 
 2. Navigate to the project directory 
    ```bash
-   cd ../Readme-File-Generator
+   cd ../Vehicle Builder
 
 3. Requires Node.js to be installed
 
@@ -53,23 +39,24 @@ The Vehicle Builder is a command-line application designed to allow the user to 
    ```bash
    node index.js 
 
-2. Answer the prompts to provide details about your project.  Some prompts that require multi-line answers use
-   a text editor. Use markdown syntax when answering these secions in thetext editor. Saving and closing the editor completes the prompt.
+2. Select whether you would like to create a new vehicle or perform action on an existing vehicle from the first menu. There is a pre-existing truck, car and motorbike you can choose from in the existing database. If you choose to create a new vehicle you will be given the choice to create a new car, truck or motorbike 
+   
 
-3. Once completed, the README.md file will be generated in the current directory.
+3. Once you have created a new vehicle or selected an exising vehicle, you are given a menu of actions to choose from that you can perform on the vehicle. You can perform additional actions until you select exit. You will see feedback from the action you have chosen in the command line.
 
+Actions include:
+- Starting and stopping the vehicle.
+- Accelerating and decelerating in 5 mph increments.
+- Turning right, left and reversing
+- Motorbikes can perform a wheelie.
+- Trucks can tow other vehicles.
 
-![Screenshot1stQuestionsAdj](https://github.com/user-attachments/assets/547b98e8-f5a6-4338-9849-13f5534ec6ae)    ![Screenshot2ndQuestion](https://github.com/user-attachments/assets/984209ff-5c1f-4bc6-aa27-2b9055210f86)
-
-
-![ScreenshotTextEditorAdj](https://github.com/user-attachments/assets/4cc03d03-675f-4ccd-a07f-0d266d203667)      ![ScreenshotLicenseAdj](https://github.com/user-attachments/assets/6e4693c7-5250-4453-bbbd-df8e8a83aacb)
-
-![ScreenshotCompleteAdj](https://github.com/user-attachments/assets/256637a5-7a56-42d9-bcef-2aad720d0691)
 
 
 ## Walkthrough
 
-https://drive.google.com/file/d/1HCRXeFDe4pAbOUVksy7iHu_ZFwOuzdwF/view?usp=sharing
+[Walkthrough Video]
+
 
 ## Contributing
 Contributions are welcome! Please follow these steps:
@@ -91,6 +78,7 @@ To test the application:
 2.	Run the application and verify the output:
     ```bash
     node index.js
+
 ## Questions
 
  If you have any questions, feel free to contact me at dougtanyah@gmail.com.
