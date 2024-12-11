@@ -27,18 +27,18 @@ The Vehicle Builder is a command-line application designed to allow the user to 
 
 4. Requires a terminal environment with an editor installed
 
-5. Install 'inquirer' package
+5. Install dependent packages: Inquirer and Typescript
    ```bash
-   npm install inquirer
+   npm install
 
-6.  Run the application
+6.  Run the application using typeScript transpiler command:
     ```bash
-    node index.js
+    npm start
 
 ## Usage
-1. Run the application in the terminal:
+1. Transpile and run the program using transpiler command::
    ```bash
-   node index.js 
+   npm start 
 
 2. Select whether you would like to create a new vehicle or perform action on an existing vehicle from the first menu.  
 
@@ -73,17 +73,20 @@ The Vehicle Builder is a command-line application designed to allow the user to 
       ![Img3-Choices](https://github.com/user-attachments/assets/472d8175-faa6-4ccc-ae6c-c54841dff2fb)
 
 
-   Feedback on the choice you made will show on the command line. You can also create a report of the vehicle whic will show it's current state:
+   Feedback on the choice you made will show on the command line. You can also create a report of the vehicle which will show it's current state:
         
       ![print details](https://github.com/user-attachments/assets/9011a624-4c69-4562-913a-fac0edf65b14)
 
 ## Walkthrough
 
-[Walkthrough Video]
+[Walkthrough Video](https://drive.google.com/file/d/1ap_g0afTHNN4WEPI1nkhBGUq6-Yq-Joq/view?usp=sharing) 
 
 
 ## Contributing
-Contributions are welcome! Please follow these steps:
+Contributions are welcome! This project has been developed using typeScript.
+
+Please follow these steps:
+
 1.	Fork the repository.
 2.	Create a new branch for your feature or bug fix:
     ```bash
@@ -99,9 +102,9 @@ Contributions are welcome! Please follow these steps:
 ## Tests
 To test the application:
 1.	Ensure all dependencies are installed.
-2.	Run the application and verify the output:
+2.	Transpile and Run the application and verify the output:
     ```bash
-    node index.js
+    npm start
 
 ## Questions
 
